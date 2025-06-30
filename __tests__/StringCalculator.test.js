@@ -26,10 +26,14 @@ describe('StringCalculator', () => {
   });
 
   test('throws an exception for a single negative number', () => {
-    expect(() => StringCalculator.add('1,-2,3')).toThrow('negative numbers not allowed -2');
+    expect(() => StringCalculator.add('1,-2,3')).toThrow(
+      'negative numbers not allowed -2',
+    );
   });
 
   test('throws an exception listing all negative numbers', () => {
-    expect(() => StringCalculator.add('1,-2,-5,3')).toThrow('negative numbers not allowed -2,-5');
+    expect(() => StringCalculator.add('1,-2,-5,3')).toThrow(
+      'negative numbers not allowed -2,-5',
+    );
   });
 }); 

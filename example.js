@@ -9,7 +9,8 @@ if (input === undefined) {
 }
 
 try {
-  const result = StringCalculator.add(input);
+  const processedInput = input.replace(/\\n/g, '\n');
+  const result = StringCalculator.add(processedInput);
   console.log(`Input: "${input}"`);
   console.log(`Result: ${result}`);
 } catch (error) {
