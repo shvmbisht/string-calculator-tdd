@@ -21,7 +21,7 @@ The `add` method supports the following features:
 5.  Custom single-character delimiters are supported using the format `//[delimiter]\n[numbers...]`.
 6.  Calling `add` with negative numbers throws an exception, listing all negatives in the error message.
 
-## Setup and Usage
+## Setup and Testing
 
 To run the tests for this project, follow these steps:
 
@@ -40,6 +40,30 @@ To run the tests for this project, follow these steps:
     ```sh
     npm test
     ```
+
+## Running the Code
+
+You can also run the calculator directly from the command line using the included `example.js` script.
+
+**Usage:**
+```sh
+node example.js "<string-of-numbers>"
+```
+
+**Examples:**
+```sh
+# Basic sum
+node example.js "1,5"
+# Result: 6
+
+# Custom delimiter
+node example.js "//;\n1;2"
+# Result: 3
+
+# Negative numbers
+node example.js "1,-2,-3"
+# Throws: negative numbers not allowed -2,-3
+```
 
 ## Technology Stack
 
