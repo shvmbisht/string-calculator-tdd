@@ -3,6 +3,7 @@ module.exports = {
     if (numbers === '') {
       return 0;
     }
-    return numbers.split(',').reduce((sum, n) => sum + parseInt(n, 10), 0);
+    const nums = numbers.replace(/\n/g, ',');
+    return nums.split(',').reduce((sum, n) => sum + parseInt(n, 10), 0);
   },
 }; 
